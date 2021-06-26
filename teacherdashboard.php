@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE<html>
 <html lang="en">
 
 <head>
@@ -13,17 +13,22 @@
 </head>
 
 <body>
+<?php
+$name=$_GET['name'];
+$user=$_GET['username'];
+?>
     <div id="header">
         <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
             <div class="container-fluid" id="header">
                 <div class="navbar-header">
+        
                     <a class="navbar-brand" href="#">
                         <p style="font-size:35px;text-transform: uppercase;margin:auto;padding:5px 5px">Quiz App</p>
                     </a>
                     <a class="navbar-brand" href="#">
                         <?php echo "<p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;'>Welcome {$_GET['name']}</p>"; ?>
                     </a>
-                    <a class="navbar-brand" href="./view_course.php">
+                    <a class="navbar-brand" href="./view_course.php?user={$user}">
                         <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">View Course</p>
                     </a>
                     <a class="navbar-brand" href="./add_course.php">
@@ -44,32 +49,36 @@
     </div>
     <div class="outer-div">
         <?php
-        echo "<h2>Welcome {$_GET['name']}</h2>";
+        echo "<h2>Welcome {$user}</h2>";
+
+        echo "<button type='button' id='view'>";
+            echo "<a class='navbar-brand' href='./view_course.php?name={$user}'>";
+                echo "<p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;'>View Course</p>";
+            echo "</a>";
+        echo "</button>";
+
+        
+        echo "<button type='button' id='add'>";
+            echo "<a class='navbar-brand' href='./add_course.php?name={$user}'>";
+                echo "<p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;'>Add Course</p>";
+            echo "</a>";
+        echo "</button>";
+
+        echo "<button type='button' id='edit'>";
+            echo "<a class='navbar-brand' href='./edit_course.php?name={$user}'>";
+                echo "<p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;'>Edit Course</p>";
+            echo "</a>";
+        echo "</button>";
+
+        echo "<button type='button' id='delete'>";
+            echo "<a class='navbar-brand' href='./delete_course.php?name={$user}'>";
+                echo "<p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;'>Delete Course</p>";
+            echo "</a>";
+        echo "</button>";
+
         ?>
-        <button type="button" id="view">
-            <a class="navbar-brand" href="./view_course.php">
-                <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;">View Course</p>
-            </a>
-        </button>
-
-        <button type="button" id="add">
-            <a class="navbar-brand" href="./add_course.php">
-                <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;">Add Course</p>
-            </a>
-        </button>
-
-        <button type="button" id="edit">
-            <a class="navbar-brand" href="./edit_course.php">
-                <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;">Edit Course</p>
-            </a>
-        </button>
-
-        <button type="button" id="delete">
-            <a class="navbar-brand" href="./delete_course.php">
-                <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;">Delete Course</p>
-            </a>
-        </button>
     </div>
+  
 
     <div id="footer">
         <nav class="navbar navbar-inverse navbar-fixed-bottom ">
