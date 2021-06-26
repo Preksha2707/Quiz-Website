@@ -46,23 +46,29 @@
         <?php
         echo "<h2>Welcome {$_GET['name']}</h2>";
         ?>
-        <a class="navbar-brand" href="./view_course.php">
-            <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">View Course</p>
-        </a>
-        <a class="navbar-brand" href="./add_course.php">
-            <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Add Course</p>
-        </a>
-        <a class="navbar-brand" href="./edit_course.php">
-            <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Edit Course</p>
-        </a>
-        <a class="navbar-brand" href="./delete_course.php">
-            <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Delete Course</p>
-        </a>
-        <!-- <div class="buttons">
-            <button id="teacher" style="color:#fff;text-transform:uppercase"><a href="./teacher.php" style="color:#fff">Teachers</a></button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button id="student" style="color:#fff;text-transform:uppercase"><a href="./student.html" style="color:#fff">Students</a></button>
-        </div> -->
+        <button type="button" id="view">
+            <a class="navbar-brand" href="./view_course.php">
+                <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;">View Course</p>
+            </a>
+        </button>
+
+        <button type="button" id="add">
+            <a class="navbar-brand" href="./add_course.php">
+                <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;">Add Course</p>
+            </a>
+        </button>
+
+        <button type="button" id="edit">
+            <a class="navbar-brand" href="./edit_course.php">
+                <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;">Edit Course</p>
+            </a>
+        </button>
+
+        <button type="button" id="delete">
+            <a class="navbar-brand" href="./delete_course.php">
+                <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;">Delete Course</p>
+            </a>
+        </button>
     </div>
 
     <div id="footer">
