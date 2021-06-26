@@ -29,21 +29,22 @@
                         <a class="navbar-brand" href="#">
                             <?php echo "<p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;'>Welcome {$_GET['name']}</p>"; ?>
                         </a>
-                        <a class="navbar-brand" href="./view_course.php?user={$user}">
-                            <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">View Course</p>
+                        <?php echo "<a class='navbar-brand' href='./view_course.php?name={$name}&user={$user}'>
+                            <p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px'>View Course</p>
                         </a>
-                        <a class="navbar-brand" href="./add_course.php">
-                            <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Add Course</p>
+                        <a class='navbar-brand' href='./add_course.php?name={$name}&user={$user}'>
+                            <p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px'>Add Course</p>
                         </a>
-                        <a class="navbar-brand" href="./edit_course.php">
-                            <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Edit Course</p>
+                        <a class='navbar-brand' href='./edit_course.php?name={$name}&user={$user}'>
+                            <p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px'>Edit Course</p>
                         </a>
-                        <a class="navbar-brand" href="./delete_course.php">
-                            <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Delete Course</p>
+                        <a class='navbar-brand' href='./delete_course.php?name={$name}&user={$user}'>
+                            <p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px'>Delete Course</p>
                         </a>
-                        <a class="navbar-brand" href="./teacherlogin.php">
-                            <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Logout</p>
-                        </a>
+                        <a class='navbar-brand' href='./teacherlogin.php'>
+                            <p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px'>Logout</p>
+                        </a>";
+                        ?>
                     </div>
                 </div>
             </nav>
@@ -66,11 +67,10 @@
                                 echo "<div class='row'>
                                 <div class='col-sm-4' style='width:300px;height:100px:padding:10px 10px 10px 10px;background-color:#fff'>
                                 <h3>$val1</h3>
-                                <button type='submit' id='submit' style='width:150px;height:50px;'><p style='color:white'>Add Quiz</p></button>
+                                <button type='submit' id='submit' style='width:150px;height:50px;'><p><a href='addQuiz.php?{$user}&{$name}' style='color:white'>Add Quiz</a></p></button>
                                 </div></div>";
                             }
                             echo "</div>";
-                            
                         }
                     }
                 }

@@ -28,21 +28,22 @@ $user=$_GET['username'];
                     <a class="navbar-brand" href="#">
                         <?php echo "<p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;'>Welcome {$_GET['name']}</p>"; ?>
                     </a>
-                    <a class="navbar-brand" href="./view_course.php?user={$user}">
-                        <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">View Course</p>
-                    </a>
-                    <a class="navbar-brand" href="./add_course.php">
-                        <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Add Course</p>
-                    </a>
-                    <a class="navbar-brand" href="./edit_course.php">
-                        <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Edit Course</p>
-                    </a>
-                    <a class="navbar-brand" href="./delete_course.php">
-                        <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Delete Course</p>
-                    </a>
-                    <a class="navbar-brand" href="./teacherlogin.php">
-                        <p style="font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px">Logout</p>
-                    </a>
+                    <?php echo "<a class='navbar-brand' href='./view_course.php?name={$name}&user={$user}'>
+                            <p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px'>View Course</p>
+                        </a>
+                        <a class='navbar-brand' href='./add_course.php?name={$name}&user={$user}'>
+                            <p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px'>Add Course</p>
+                        </a>
+                        <a class='navbar-brand' href='./edit_course.php?name={$name}&user={$user}'>
+                            <p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px'>Edit Course</p>
+                        </a>
+                        <a class='navbar-brand' href='./delete_course.php?name={$name}&user={$user}'>
+                            <p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px'>Delete Course</p>
+                        </a>
+                        <a class='navbar-brand' href='./teacherlogin.php'>
+                            <p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px'>Logout</p>
+                        </a>";
+                        ?>
                 </div>
             </div>
         </nav>
