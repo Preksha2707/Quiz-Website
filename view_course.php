@@ -10,11 +10,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     </head>
 
     <body>
         <?php
-        $user = $_GET['name'];
+        $name = $_GET['name'];
+        $user = $_GET['user'];
         ?>
         <div id="header">
             <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
@@ -48,11 +50,32 @@
         </div>
         <div class="outer-div">
             <?php
-            $file_name = "teacher".".json";
-            function getData() {
-                
-            }
+            function getData($user,$name)
+            {
 
+                $file_name = "teacher".".json";
+                $data = file_get_contents("$file_name");
+                $json_data = json_decode($data, true);
+                foreach ($json_data as $arr) {
+                    foreach ($arr as $key => $val) {
+                        if($key=='Username')
+                        {
+                            echo "<div class='container-fluid'>";
+                            foreach($arr['Course'] as $key1 => $val1)
+                            {
+                                echo "<div class='row'>
+                                <div class='col-sm-4' style='width:300px;height:100px:padding:10px 10px 10px 10px;background-color:#fff'>
+                                <h3>$val1</h3>
+                                <button type='submit' id='submit' style='width:150px;height:50px;'><p style='color:white'>Add Quiz</p></button>
+                                </div></div>";
+                            }
+                            echo "</div>";
+                            
+                        }
+                    }
+                }
+            }
+            getData($user,$name);
 
 
             ?>

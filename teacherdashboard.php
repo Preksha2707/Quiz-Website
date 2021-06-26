@@ -49,10 +49,10 @@ $user=$_GET['username'];
     </div>
     <div class="outer-div">
         <?php
-        echo "<h2>Welcome {$user}</h2>";
+        echo "<h2>Welcome {$name}</h2>";
 
         echo "<button type='button' id='view'>";
-            echo "<a class='navbar-brand' href='./view_course.php?name={$user}'>";
+            echo "<a class='navbar-brand' href='./view_course.php?name={$name}&user={$user}'>";
                 echo "<p style='font-size:20px;text-transform: uppercase;margin:auto;padding:5px 5px;color:#fff;'>View Course</p>";
             echo "</a>";
         echo "</button>";
