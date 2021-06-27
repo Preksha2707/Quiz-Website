@@ -1,14 +1,14 @@
 {
     "autoload": {
         "psr-4": {
-            "Vendor\\Namespace\\": "src/",
-            "": "src/"
+            "Vendor\\Namespace\\": "./",
+            "": "./"
         },
         "psr-0": {
-            "Vendor\\Namespace\\": "src/",
-            "Vendor_Namespace_": "src/"
+            "Vendor\\Namespace\\": "./",
+            "Vendor_Namespace_": "./"
         },
-        "classmap": ["src/", "lib/", "Something.php"],
+        "classmap": ["./", "./", "Something.php"],
         "exclude-from-classmap": ["/src/Tests/", "/lib/tests/"],
         "files": []
     }
