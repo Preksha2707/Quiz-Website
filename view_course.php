@@ -51,31 +51,36 @@
         </div>
         <div class="outer-div">
             <?php
-            function getData($user,$name)
+            function getData($user, $name)
             {
 
-                $file_name = "teacher".".json";
+                $file_name = "teacher" . ".json";
                 $data = file_get_contents("$file_name");
                 $json_data = json_decode($data, true);
                 foreach ($json_data as $arr) {
                     foreach ($arr as $key => $val) {
-                        if($key=='Username')
-                        {
-                            echo "<div class='container-fluid'>";
-                            foreach($arr['Course'] as $key1 => $val1)
-                            {
-                                echo "<div class='row'>
+                        if ($key == 'Username') {
+                            if ($val == $user) {
+                                echo "<div class='container-fluid'>";
+                                foreach ($arr['Course'] as $key1 => $val1) {
+                                    echo "<div class='row'>
                                 <div class='col-sm-4' style='width:300px;height:100px:padding:10px 10px 10px 10px;background-color:#fff'>
                                 <h3>$val1</h3>
-                                <button type='submit' id='submit' style='width:150px;height:50px;'><p><a href='addQuiz.php?{$user}&{$name}' style='color:white'>Add Quiz</a></p></button>
+                                <form method='GET' action='addQuiz.php'>
+                                <input type='text' id='user' name='user' value='{$user}' style='display:none;'>
+                                <input type='text' id='name' name='name' value='{$name}' style='display:none;'>
+                                <input type='text' id='cname' name='cname' value='{$val1}' style='display:none;'>
+                                <button type='submit' id='submit' style='width:150px;height:50px;'><p style='color:white'>Add Quiz</p></button>
+                                </form>
                                 </div></div>";
+                                }
+                                echo "</div>";
                             }
-                            echo "</div>";
                         }
                     }
                 }
             }
-            getData($user,$name);
+            getData($user, $name);
 
 
             ?>

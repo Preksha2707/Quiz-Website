@@ -8,7 +8,8 @@
             "1": "Computer",
             "2": "science",
             "3": "Mathematics",
-            "4": "c++"
+            "4": "c++",
+            "5": "dbms"
         }
     },
     {
@@ -16,6 +17,8 @@
         "Email": "dummy@gmail.com",
         "Username": "dummy123",
         "Password": "dummy@123",
-        "Course": []
+        "Course": [
+            "c"
+        ]
     }
 ]
