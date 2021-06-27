@@ -75,7 +75,7 @@
             echo "<input type='text' id='1ans4' name='ans4' placeholder='Option4'><br>";
             echo "<input type='text' id='cans1' name='ans' placeholder='Correct Answer'><br>";
 
-            echo "<label for='question2'><p style='text-transform: uppercase;font-weight:bold;font-family:'Roboto', sans-serif;padding-top:5px;'>Question 1</p></label><br>";
+            echo "<label for='question2'><p style='text-transform: uppercase;font-weight:bold;font-family:'Roboto', sans-serif;padding-top:5px;'>Question 2</p></label><br>";
             echo "<input type='text' id='question2' name='question2' placeholder='Question 2'><br>";
             echo "<input type='text' id='2ans1' name='ans1' placeholder='Option1'><br>";
             echo "<input type='text' id='2ans2' name='ans2' placeholder='Option2'><br>";
@@ -83,7 +83,7 @@
             echo "<input type='text' id='2ans4' name='ans4' placeholder='Option4'><br>";
             echo "<input type='text' id='cans2' name='ans' placeholder='Correct Answer'><br>";
 
-            echo "<label for='question3'><p style='text-transform: uppercase;font-weight:bold;font-family:'Roboto', sans-serif;padding-top:5px;'>Question 1</p></label><br>";
+            echo "<label for='question3'><p style='text-transform: uppercase;font-weight:bold;font-family:'Roboto', sans-serif;padding-top:5px;'>Question 3</p></label><br>";
             echo "<input type='text' id='question3' name='question3' placeholder='Question 3'><br>";
             echo "<input type='text' id='2ans1' name='ans1' placeholder='Option1'><br>";
             echo "<input type='text' id='2ans2' name='ans2' placeholder='Option2'><br>";
